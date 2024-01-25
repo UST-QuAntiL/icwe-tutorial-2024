@@ -19,15 +19,15 @@ Thereby, concepts and tools for their modeling, execution, and monitoring are in
 
 # Motivation 
 
-Quantum computers provide a computational advantage over classical computers by exploiting quantum mechanical phenomena, such as entanglement and superposition[[4]](#4).
-However, quantum computers won't replace classical computers but rather serve as co-processors for specific problems, as they are not suitable for many traditional tasks, such as data persistence[[7]](#7).
+Quantum computers provide a computational advantage over classical computers by exploiting quantum mechanical phenomena, such as entanglement and superposition [[4]](#4).
+However, quantum computers won't replace classical computers but rather serve as co-processors for specific problems, as they are not suitable for many traditional tasks, such as data persistence [[6]](#6).
 Hence, hybrid quantum applications require the integration of classical and quantum programs.
-These applications can benefit from classical software engineering principles, such as modularization and separation of concerns[[1]](#1).
-In particular, service-based access of quantum computers is suitable, as they are typically provided via the cloud.
+These applications can benefit from classical software engineering principles, such as modularization and separation of concerns [[1]](#1).
+In particular, service-based access of quantum computers is suitable, as they are typically provided via the cloud [[3]](#3).
 However, the development of quantum web services requires expert knowledge of quantum programming and hardware.
-To tackle this issue, an approach for the automated generation of quantum web services using OpenAPI specifications, as well as their automated deployment, has been presented.
-Since hybrid quantum applications typically comprise many of these services, they must be orchestrated, i.e., the control and data flow between them must be defined[[8]](#8).
-Due to advantages, such as transaction processing, reliability,and robustness, workflows are a suitable technology for this orchestration.
+To tackle this issue, an approach for the automated generation of quantum web services using OpenAPI specifications, as well as their automated deployment, has been presented [[2]](#2).
+Since hybrid quantum applications typically comprise many of these services, they must be orchestrated, i.e., the control and data flow between them must be defined [[5]](#5).
+Due to advantages, such as transaction processing, reliability, and robustness, workflows are a suitable technology for this orchestration.
 
 # Intended Audience
 
@@ -53,8 +53,8 @@ Attendees will have obtained knowledge on:
 ## References
 
 <a id="1">[1]</a> Beisel, M., Barzen, J., Garhofer, S., Leymann, F., Truger, F., Weder, B., Yussupov, V.: **Quokka: A Service Ecosystem for Workflow-Based Execution of Variational Quantum Algorithms.** In: Service-Oriented Computing – ICSOC 2022 Workshops. Springer (2023)
+<a id="2">[2]</a> TODO
+<a id="3">[3]</a> TODO
 <a id="4">[4]</a> Nielsen, M.A., Chuang, I.: **Quantum Computation and Quantum Information.** AAPT (2010)
-<a id="7">[7]</a> Weder, B., Barzen, J., Leymann, F., Vietz, D.: **Quantum Software Development Lifecycle**, pp. 61–83. Springer (2022)  
-<a id="8">[8]</a> Weder, B., Breitenbücher, U., Leymann, F., Wild, K.: **Integrating Quantum Computing into Workflow Modeling and Execution.** In: Proceedings of the 13th IEEE/ACM International Conference on Utility and Cloud Computing (UCC). pp. 279–291. IEEE Computer Society (2020)  
-
-
+<a id="5">[5]</a> Weder, B., Breitenbücher, U., Leymann, F., Wild, K.: **Integrating Quantum Computing into Workflow Modeling and Execution.** In: Proceedings of the 13th IEEE/ACM International Conference on Utility and Cloud Computing (UCC). pp. 279–291. IEEE Computer Society (2020)  
+<a id="6">[6]</a> Weder, B., Barzen, J., Leymann, F., Vietz, D.: **Quantum Software Development Lifecycle**, pp. 61–83. Springer (2022)  
