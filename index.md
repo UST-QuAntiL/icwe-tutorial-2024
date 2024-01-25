@@ -53,8 +53,13 @@ Attendees will have obtained knowledge on:
 ## References
 
 <a id="1">[1]</a> Beisel, M., Barzen, J., Garhofer, S., Leymann, F., Truger, F., Weder, B., Yussupov, V.: **Quokka: A Service Ecosystem for Workflow-Based Execution of Variational Quantum Algorithms.** In: Service-Oriented Computing – ICSOC 2022 Workshops. Springer (2023)
+
 <a id="2">[2]</a> TODO
+
 <a id="3">[3]</a> TODO
+
 <a id="4">[4]</a> Nielsen, M.A., Chuang, I.: **Quantum Computation and Quantum Information.** AAPT (2010)
-<a id="5">[5]</a> Weder, B., Breitenbücher, U., Leymann, F., Wild, K.: **Integrating Quantum Computing into Workflow Modeling and Execution.** In: Proceedings of the 13th IEEE/ACM International Conference on Utility and Cloud Computing (UCC). pp. 279–291. IEEE Computer Society (2020)  
+
+<a id="5">[5]</a> Weder, B., Breitenbücher, U., Leymann, F., Wild, K.: **Integrating Quantum Computing into Workflow Modeling and Execution.** In: Proceedings of the 13th IEEE/ACM International Conference on Utility and Cloud Computing (UCC). pp. 279–291. IEEE Computer Society (2020)
+
 <a id="6">[6]</a> Weder, B., Barzen, J., Leymann, F., Vietz, D.: **Quantum Software Development Lifecycle**, pp. 61–83. Springer (2022)  
