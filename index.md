@@ -54,7 +54,7 @@ Attendees will have obtained knowledge on:
 
 <a id="1">[1]</a> Beisel, M., Barzen, J., Garhofer, S., Leymann, F., Truger, F., Weder, B., Yussupov, V.: **Quokka: A Service Ecosystem for Workflow-Based Execution of Variational Quantum Algorithms.** In: Service-Oriented Computing – ICSOC 2022 Workshops. Springer (2023)
 
-<a id="2">[2]</a> TODO
+<a id="2">[2]</a> Garcia-Alonso, J., Rojo, J., Valencia, D., Moguel, E., Berrocal, J., Murillo, J. M.: **Quantum Software as a Service Through a Quantum API Gateway.** In: IEEE Internet Computing (2022)
 
 <a id="3">[3]</a> TODO
 
