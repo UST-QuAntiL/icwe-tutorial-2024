@@ -56,7 +56,7 @@ Attendees will have obtained knowledge on:
 
 <a id="2">[2]</a> Garcia-Alonso, J., Rojo, J., Valencia, D., Moguel, E., Berrocal, J., Murillo, J. M.: **Quantum Software as a Service Through a Quantum API Gateway.** In: IEEE Internet Computing (2022)
 
-<a id="3">[3]</a> TODO
+<a id="3">[3]</a> Moguel, E., Rojo, J., Valencia, D., Berrocal, J., Garcia-Alonso, J., Murillo, J. M.: **Quantum service-oriented computing: current landscape and challenges.** In: Software Quality Journal (2022)
 
 <a id="4">[4]</a> Nielsen, M.A., Chuang, I.: **Quantum Computation and Quantum Information.** AAPT (2010)
 
