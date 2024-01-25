@@ -25,5 +25,5 @@ He received his master's degree from the University of Stuttgart in Computer Sci
 He is the technical lead of the [EniQmA](https://www.iaas.uni-stuttgart.de/en/projects/EniQmA/) project at the IAAS, developing techniques for holistic quantum software engineering and a corresponding toolchain.
 
 ### Acknowledgments
-This work was partially funded by the BMWK projects EniQmA(01MQ22007B) and SeQuenC(01MQ22009B).
+This work was partially funded by the BMWK projects EniQmA (01MQ22007B) and SeQuenC (01MQ22009B).
 It was also partially funded by the Ministry of Science, Innovation and Universities of Spain (project PID2021-1240454OB-C31) and by the Regional Ministry of Economy, Science and Digital Agenda of the Regional Government of Extremadura (GR21133).
