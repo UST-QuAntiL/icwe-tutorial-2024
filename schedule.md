@@ -13,12 +13,14 @@ In the first session, the following topics are discussed:
 
 - First, basic concepts and application areas of quantum computing are introduced.
 - The second part of the session presents a concept and a corresponding toolchain to convert quantum algorithms into quantum web services using OpenAPI specifications.
-- This toolchain is then used in a practical session to deploy a web service based on the Qiskit SDK
+- This toolchain is then used in a practical session to deploy a web service based on the Qiskit SDK.
 - Finally, an approach for orchestrating hybrid quantum applications using workflows is presented, facilitating the integration of classical and quantum programs.
 
 The second session is planned as follows:
 
-- TODO
+- The first part introduces the quantum service ecosystem Quokka and views on quantum workflows to facilitate observing and analyzing quantum workflows.
+- Next, the concepts are applied in a practical session, where attendees model and execute two quantum workflows.
+- Finally, attendees are requested to participate in a survey, evaluating the presented concepts and can propose desired extensions to the toolchain.
 
 ## Agenda
 
