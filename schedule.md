@@ -7,12 +7,12 @@ navigation_weight: 2
 
 # Tutorial Structure
 
-The tutorial comprises two 90min sessions, including both lectures and practical activities:
+The tutorial comprises two 90 min sessions, including both lectures and practical activities:
 
 In the first session, the following topics are discussed:
 
 - First, basic concepts and application areas of quantum computing are introduced.
-- The second part of the tutorial presents a concept and a corresponding toolchain to convert quantum algorithms into quantum web services using OpenAPI specifications.
+- The second part of the session presents a concept and a corresponding toolchain to convert quantum algorithms into quantum web services using OpenAPI specifications.
 - This toolchain is then used in a practical session to deploy a web service based on the Qiskit SDK
 - Finally, an approach for orchestrating hybrid quantum applications using workflows is presented, facilitating the integration of classical and quantum programs.
 
