@@ -22,4 +22,14 @@ The second session is planned as follows:
 
 ## Agenda
 
-To Be Released
+| 09:00 - 10:30 | **Session 1: Quantum Service-oriented Computing** |
+| | TODO (Slides) |
+| | TODO (Slides) |
+| | TODO (Slides) |
+| | TODO (Slides) |
+| 10:30 - 11:00 | Break |
+| 11:00 - 12:30 | **Session 2: Quantum Workflows** |
+| | TODO (Slides) |
+| | TODO (Slides) |
+| | TODO (Slides) |
+| | TODO (Slides) |
