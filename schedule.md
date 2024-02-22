@@ -29,7 +29,7 @@ The second session is planned as follows:
 | 10:15 - 10:30 | Quantum Workflows (Slides) |
 | 10:30 - 11:00 | Break |
 | **11:00 - 12:30** | **Session 2: Quantum Workflows** |
-| 11:00 - 11:15 | Quantum Service Ecosystem (Slides) |
-| | TODO (Slides) |
-| | TODO (Slides) |
-| | TODO (Slides) |
+| 11:00 - 11:15 | Quantum Service Ecosystem & Views on Quantum Workflows (Slides) |
+| 11:15 - 12:00 | Practical Session: Quantum Workflows (Instructions) |
+| 12:00 - 12:15 | Evaluation (Survey) |
+| 12:15 - 12:30 | Q/A & Closing (Slides) |
