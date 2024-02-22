@@ -22,14 +22,14 @@ The second session is planned as follows:
 
 ## Agenda
 
-| 09:00 - 10:30 | **Session 1: Quantum Service-oriented Computing** |
-| | TODO (Slides) |
-| | TODO (Slides) |
-| | TODO (Slides) |
-| | TODO (Slides) |
+| **09:00 - 10:30** | **Session 1: Quantum Service-oriented Computing** |
+| 09:00 - 09:15 | Opening & Quantum Computing Fundamentals (Slides) |
+| 09:15 - 09:35 | Quantum Web Services (Slides) |
+| 09:35 - 10:15 | Practical Session: Quantum Web Services (Instructions) |
+| 10:15 - 10:30 | Quantum Workflows (Slides) |
 | 10:30 - 11:00 | Break |
-| 11:00 - 12:30 | **Session 2: Quantum Workflows** |
-| | TODO (Slides) |
+| **11:00 - 12:30** | **Session 2: Quantum Workflows** |
+| 11:00 - 11:15 | Quantum Service Ecosystem (Slides) |
 | | TODO (Slides) |
 | | TODO (Slides) |
 | | TODO (Slides) |
