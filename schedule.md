@@ -20,7 +20,7 @@ The second session is planned as follows:
 
 - The first part introduces the quantum service ecosystem Quokka and views on quantum workflows to facilitate observing and analyzing quantum workflows.
 - Next, the concepts are applied in a practical session, where attendees model and execute two quantum workflows.
-- Finally, attendees are requested to participate in a survey, evaluating the presented concepts and can propose desired extensions to the toolchain.
+- Finally, attendees are requested to participate in a survey to evaluate the presented concepts and can propose desired extensions to the toolchain.
 
 ## Agenda
 
