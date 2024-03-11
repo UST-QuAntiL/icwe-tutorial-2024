@@ -25,9 +25,9 @@ The second session is planned as follows:
 ## Agenda
 
 | **09:00 - 10:30** | **Session 1: Quantum Service-oriented Computing** |
-| 09:00 - 09:15 | Opening & Quantum Computing Fundamentals (Slides) |
-| 09:15 - 09:35 | Quantum Web Services (Slides) |
-| 09:35 - 10:15 | Practical Session: Quantum Web Services (Instructions) |
+| 09:00 - 09:15 | Opening & Quantum Computing Fundamentals ([Slides](https://raw.githubusercontent.com/UST-QuAntiL/icwe-tutorial-2024/main/resources/slides/ICWE24_Session1_01_Fundamentals.pdf])) |
+| 09:15 - 09:35 | Quantum Web Services ([Slides](https://raw.githubusercontent.com/UST-QuAntiL/icwe-tutorial-2024/main/resources/slides/ICWE24_Session1_02_QuantumWebServices.pdf])) | |
+| 09:35 - 10:15 | Practical Session: Quantum Web Services ([Instructions](https://raw.githubusercontent.com/UST-QuAntiL/icwe-tutorial-2024/main/resources/slides/ICWE24_Session1_03_PracticalSession.pdf])) | |
 | 10:15 - 10:30 | Quantum Workflows (Slides) |
 | 10:30 - 11:00 | Break |
 | **11:00 - 12:30** | **Session 2: Quantum Workflows** |
