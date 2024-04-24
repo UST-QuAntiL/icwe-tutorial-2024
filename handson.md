@@ -13,7 +13,7 @@ Afterwards, the same workflow is automatically generated based on a set of selec
 
 The use case utilizes the following tools:
 
-* [Pattern Atlas](https://github.com/PatternAtlas): TODO.
+* [Pattern Atlas](https://github.com/PatternAtlas): A graphical tool for authoring and visualizing patterns and pattern languages.
 * [Process View Plugin](https://github.com/UST-QuAntiL/camunda-process-view-plugins): TODO.
 * [OpenTOSCA Container](https://github.com/OpenTOSCA/container): A TOSCA-compliant deployment system.
 * [Quantum Workflow Modeler](https://github.com/PlanQK/workflow-modeler): A graphical BPMN modeler to define, transform, and deploy quantum workflows.
@@ -90,6 +90,23 @@ Finally, utilize the ``Goemans-Williamson`` algorithm to calculate the initial s
 Next, add a second task of type Quantum Circuit Loading Task to load to parameterized QAOA circuit that is later executed in the variational loop.
 The functionality to generate a corresponding quantum circuit is provided by Quokka, therefore, configure the task using ``quokka/maxcut`` as URL.
 Furthermore, connect both tasks with the start event using sequence flow.
+
+![Modeler Configure Circuit Loading](./resources/images/modeler_loading_config.png)
+
+Due to today's restricted quantum computers, the quantum circuit should be [cut into multiple smaller sub-circuits](https://arxiv.org/pdf/2302.01792), thus, reducing the impact of errors, as well as the limited number of qubits.
+Add a Circuit Cutting Task, which is also available within the QuantME Tasks category.
+Configure the Circuit Cutting Task to use the Cutting Method ``knitting toolbox``, utilizing the implementation provided by the [Circuit Knitting Toolbox](https://qiskit-extensions.github.io/circuit-knitting-toolbox/).
+Furthermore, set Maximum Sub-Circuit width to ``5``, Maximum Number of Cuts to ``2``, and Maximum Number of Sub-Circuits to ``2``.
+Finally, add an Exclusive Gateway to later join the sequence flow of the optimization loop.
+
+![Modeler Configure Circuit Cutting](./resources/images/modeler_cutting_config.png)
+
+Next, add a task of type Quantum Circuit Execution Task to execute the loaded quantum circuit on a quantum computer.
+For this example, we configure the task to use ``ibm`` as quantum hardware provider and the ``aer_qasm_simulator`` as QPU.
+The aer_qasm_simulator is a simulator that can be executed locally to avoid queuing times.
+Furthermore, the number of shots, i.e., the number of executions, is set to ``2000``, and it is specified that the circuit to execute was implemented using ``openqasm``.
+
+![Modeler Configure Circuit Execution](./resources/images/modeler_execution_config.png)
 
 TODO
 
