@@ -117,7 +117,9 @@ To reduce the impact of readout errors, add a Readout Error Mitigation Task and 
 
 ![Modeler Configure Readout Error Mitigation](./resources/images/modeler_rem_config.png)
 
-TODO
+After the mitigation the results of the different sub circuit executions are combined using a Cutting Result Combination Task to receive the overall result.
+Thereby, the same Cutting Method must be used, i.e., ``knitting toolbox``.
+Additionally, add another Exclusive Gateway to enter the next iteration of the optimization loop.
 
 ![Modeler Configure Result Combination](./resources/images/modeler_combination_config.png)
 
