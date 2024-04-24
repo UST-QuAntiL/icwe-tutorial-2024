@@ -108,6 +108,15 @@ Furthermore, the number of shots, i.e., the number of executions, is set to ``20
 
 ![Modeler Configure Circuit Execution](./resources/images/modeler_execution_config.png)
 
+To reduce the impact of readout errors, add a Readout Error Mitigation Task and configure it as follows:
+
+* Provider: ``ibm``
+* QPU: ``aer_qasm_simulator``
+* Mitigation Method: ``Matrix Inversion``
+* Calibration Matrix Generation Method: ``Full Matrix``
+
+![Modeler Configure Readout Error Mitigation](./resources/images/modeler_rem_config.png)
+
 TODO
 
 ## Part 2: Pattern-based Generation of Quantum Workflows
