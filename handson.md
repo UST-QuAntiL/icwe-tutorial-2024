@@ -24,8 +24,7 @@ The use case utilizes the following tools:
 
 The code required for the hands-on session is available [here](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/2024-icwe-tutorial).
 
-In case you participate in the tutorial on-side and use one of the provided virtual machines, please only download the workflow model available [here](TODO).
-Afterwards, move to [Part 1](#quantum-workflow-modeler) and use the provided IP to replace the placeholder $IP.
+**In case you participate in the tutorial on-site and use one of the provided virtual machines, move to [Part 1](#quantum-workflow-modeler) and use the provided IP to replace the placeholder $IP.**
 
 On Windows, you have to activate long paths for Git to enable cloning and pushing to this repository.
 Thus, execute the following command:
@@ -54,6 +53,7 @@ cd docker
 docker-compose pull
 docker-compose up --build
 ```
+
 3. Wait until all containers are up and running. This may take some minutes.
 
 ## Quantum Workflow Modeler
