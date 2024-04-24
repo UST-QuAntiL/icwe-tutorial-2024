@@ -131,6 +131,23 @@ Additionally, add another Exclusive Gateway to enter the next iteration of the o
 
 ![Modeler Configure Result Evaluation](./resources/images/modeler_evaluation_config.png)
 
+If another iteration is required, the parameters are optimized using a Parameter Optimization Task.
+Configure the task to utilize ``Cobyla`` as Optimizer.
+
+![Modeler Configure Optimizer](./resources/images/modeler_optimization_config.png)
+
+Connect the Optimizer Task to the first Exclusive Gateway.
+Afterwards, add the following expression to the sequence flow between the second Exclusive Gateway and the Optimizer Task as also shown below:
+``${ execution.getVariable('converged')== null || execution.getVariable('converged') == 'false'}``
+
+![Modeler Configure Sequence Flow](./resources/images/modeler_uppergateway_config.png)
+
+TODO
+
+![Modeler Configure Sequence Flow 2](./resources/images/modeler_user_task_config.png)
+
+${ execution.getVariable('converged')!= null && execution.getVariable('converged') == 'true'}
+
 TODO
 
 ## Part 2: Pattern-based Generation of Quantum Workflows
