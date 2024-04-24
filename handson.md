@@ -104,7 +104,7 @@ Finally, add an Exclusive Gateway to later join the sequence flow of the optimiz
 Next, add a task of type Quantum Circuit Execution Task to execute the loaded quantum circuit on a quantum computer.
 For this example, we configure the task to use ``ibm`` as quantum hardware provider and the ``aer_qasm_simulator`` as QPU.
 The aer_qasm_simulator is a simulator that can be executed locally to avoid queuing times.
-Furthermore, the number of shots, i.e., the number of executions, is set to ``2000``, and it is specified that the circuit to execute was implemented using ``qiskit``.
+Furthermore, the number of shots, i.e., the number of executions, is set to ``2000``, and it is specified that the circuit to execute was implemented using ``openqasm``.
 
 ![Modeler Configure Circuit Execution](./resources/images/modeler_execution_config.png)
 
