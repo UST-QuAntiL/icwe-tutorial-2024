@@ -89,7 +89,7 @@ Finally, utilize the ``Goemans-Williamson`` algorithm to calculate the initial s
 
 Next, add a second task of type Quantum Circuit Loading Task to load to parameterized QAOA circuit that is later executed in the variational loop.
 The functionality to generate a corresponding quantum circuit is provided by Quokka, therefore, configure the task using ``quokka/maxcut`` as URL.
-Furthermore, connect both tasks with the start event using sequence flow and add a subsequent Exclusive Gateway.
+Furthermore, connect both tasks with the start event using sequence flow.
 
 ![Modeler Configure Circuit Loading](./resources/images/modeler_loading_config.png)
 
@@ -97,6 +97,7 @@ Due to today's restricted quantum computers, the quantum circuit should be [cut 
 Add a Circuit Cutting Task, which is also available within the QuantME Tasks category.
 Configure the Circuit Cutting Task to use the Cutting Method ``knitting toolbox``, utilizing the implementation provided by the [Circuit Knitting Toolbox](https://qiskit-extensions.github.io/circuit-knitting-toolbox/).
 Furthermore, set Maximum Sub-Circuit width to ``5``, Maximum Number of Cuts to ``2``, and Maximum Number of Sub-Circuits to ``2``.
+Finally, add an Exclusive Gateway to later join the sequence flow of the optimization loop.
 
 ![Modeler Configure Circuit Cutting](./resources/images/modeler_cutting_config.png)
 
