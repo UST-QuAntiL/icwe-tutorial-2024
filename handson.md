@@ -72,7 +72,7 @@ In the first part of the hands-on session, you will model and execute a quantum 
 To model the quantum workflow, the [Quantum Modeling Extension (QuantME)](https://www.iaas.uni-stuttgart.de/publications/Weder2020_QuantumWorkflows.pdf), as well as its extension for Variational Quantum Algorithms (VQAs), called [QuantME4VQA](https://www.iaas.uni-stuttgart.de/publications/Beisel2023_QuantME4VQA.pdf), are used.
 
 First, add a Warm-Starting Task after the initial Start Event.
-[Warm-starting](https://www.mdpi.com/2079-9292/11/7/1033/pdf) is used to approximate a solution that is incorporated into the quantum circuit to facilitate the search for the optimal solution.
+Warm-starting is used to approximate a solution that is incorporated into the quantum circuit to facilitate the search for the optimal solution.
 Select the Task icon in the palette (1), drag it into the pane, click on the wrench symbol (2), and select the QuantME Tasks category in the drop-down menu (3).
 Finally, click on Warm-Starting Task within the QuantME Tasks category.
 
