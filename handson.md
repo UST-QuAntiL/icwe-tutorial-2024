@@ -110,7 +110,10 @@ Furthermore, the number of shots, i.e., the number of executions, is set to ``20
 
 To reduce the impact of readout errors, add a Readout Error Mitigation Task and configure it as follows:
 
-* TODO
+* Provider: ``ibm``
+* QPU: ``aer_qasm_simulator``
+* Mitigation Method: ``Matrix Inversion``
+* Calibration Matrix Generation Method: ``Full Matrix``
 
 ![Modeler Configure Readout Error Mitigation](./resources/images/modeler_rem_config.png)
 
