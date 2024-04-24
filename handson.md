@@ -131,6 +131,11 @@ Additionally, add another Exclusive Gateway to enter the next iteration of the o
 
 ![Modeler Configure Result Evaluation](./resources/images/modeler_evaluation_config.png)
 
+If another iteration is required, the parameters are optimized using a Parameter Optimization Task.
+Configure the task to utilize ``Cobyla`` as Optimizer.
+
+![Modeler Configure Optimizer](./resources/images/modeler_optimization_config.png)
+
 TODO
 
 ## Part 2: Pattern-based Generation of Quantum Workflows
