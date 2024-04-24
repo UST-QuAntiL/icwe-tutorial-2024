@@ -7,7 +7,9 @@ navigation_weight: 3
 
 # Hands-On Session
 
-TODO
+In the following, we will guide you through all the steps required to model, deploy, and execute a hybrid quantum application using workflows.
+In the first part of the tutorial, a quantum workflow is modeled manually by attendees.
+Afterwards, the same workflow is automatically generated based on a set of selected patterns.
 
 The use case utilizes the following tools:
 
