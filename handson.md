@@ -137,16 +137,18 @@ Configure the task to utilize ``Cobyla`` as Optimizer.
 ![Modeler Configure Optimizer](./resources/images/modeler_optimization_config.png)
 
 Connect the Optimizer Task to the first Exclusive Gateway.
-Afterwards, add the following expression to the sequence flow between the second Exclusive Gateway and the Optimizer Task as also shown below:
+Afterwards, add the following expression to the sequence flow between the second Exclusive Gateway and the Optimizer Task as shown below:
 ``${ execution.getVariable('converged')== null || execution.getVariable('converged') == 'false'}``
 
 ![Modeler Configure Sequence Flow](./resources/images/modeler_uppergateway_config.png)
 
-TODO
+Finally, add a User Task and connect the second Exclusive Gateway to it.
+Furthermore, use the following condition: ``${ execution.getVariable('converged')!= null && execution.getVariable('converged') == 'true'}``
+The Result Evaluation Task generates an image to visualize the identified MaxCut.
+Thus, the User Task has to be configured to enable analyzing this image.
+Hence, use a form of type Generated Task Forms and add a form field to display the URL of the result image as shown below:
 
 ![Modeler Configure Sequence Flow 2](./resources/images/modeler_user_task_config.png)
-
-${ execution.getVariable('converged')!= null && execution.getVariable('converged') == 'true'}
 
 TODO
 
