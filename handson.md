@@ -138,6 +138,10 @@ Configure the task to utilize ``Cobyla`` as Optimizer.
 
 TODO
 
+![Modeler Configure Sequence Flow](./resources/images/modeler_uppergateway_config.png)
+
+TODO
+
 ## Part 2: Pattern-based Generation of Quantum Workflows
 
 TODO
