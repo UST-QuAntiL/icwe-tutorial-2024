@@ -60,7 +60,7 @@ Open the quantum workflow modeler using the following URL: http://$IP:8080
 
 Afterwards, the following screen should be displayed:
 
-![Modeler Initial](./resources/images/modeler-initial.png)
+![Modeler Initial](./resources/images/modeler_initial.png)
 
 Familiarize yourself with the workflow modeler by dragging and dropping elements from the palette on the right into the modeling pane.
 
