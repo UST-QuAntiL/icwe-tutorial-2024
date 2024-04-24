@@ -119,6 +119,10 @@ To reduce the impact of readout errors, add a Readout Error Mitigation Task and 
 
 TODO
 
+![Modeler Configure Result Combination](./resources/images/modeler_combination_config.png)
+
+TODO
+
 ## Part 2: Pattern-based Generation of Quantum Workflows
 
 TODO
