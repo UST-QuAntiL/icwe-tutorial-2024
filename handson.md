@@ -117,6 +117,20 @@ To reduce the impact of readout errors, add a Readout Error Mitigation Task and 
 
 ![Modeler Configure Readout Error Mitigation](./resources/images/modeler_rem_config.png)
 
+After the mitigation the results of the different sub circuit executions are combined using a Cutting Result Combination Task to receive the overall result.
+Thereby, the same Cutting Method must be used, i.e., ``knitting toolbox``.
+
+![Modeler Configure Result Combination](./resources/images/modeler_combination_config.png)
+
+To evaluate the quality of the results, add a Result Evaluation Task and configure it as follows:
+
+* Objective Function: ``Expectation Value``
+* Cost function to use: ``maxcut``
+
+Additionally, add another Exclusive Gateway to enter the next iteration of the optimization loop if required.
+
+![Modeler Configure Result Evaluation](./resources/images/modeler_evaluation_config.png)
+
 TODO
 
 ## Part 2: Pattern-based Generation of Quantum Workflows
