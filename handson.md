@@ -71,12 +71,25 @@ If you are not familiar with BPMN, have a look at the [Camunda introduction](htt
 ## Part 1: QAOA for MaxCut
 
 In the first part of the hands-on session, you will model and execute a quantum workflow orchestrating the [Quantum Approximate Optimization Algorithm (QAOA)](https://arxiv.org/pdf/1411.4028.pdf) to solve the Maximum Cut (MaxCut) problem.
-To model the quantum workflow, the [Quantum Modeling Extension (QuantME)](https://www.iaas.uni-stuttgart.de/publications/Weder2020_QuantumWorkflows.pdf), as well as its extension for Variational Quantum Algorithms (VQAs), called [QuantME4VQA](https://www.iaas.uni-stuttgart.de/publications/Beisel2023_QuantME4VQA.pdf), are used.
+To model the quantum workflow, the [Quantum Modeling Extension (QuantME)](https://www.iaas.uni-stuttgart.de/publications/Weder2020_QuantumWorkflows.pdf) is used.
 
 First, add a Warm-Starting Task after the initial Start Event.
 Warm-starting is used to approximate a solution that is incorporated into the quantum circuit to facilitate the search for the optimal solution.
-Select the Task icon in the palette (1), drag it into the pane, click on the wrench symbol (2), and select the QuantME Tasks category in the drop-down menu (3).
+Select the Task icon in the palette (1), drag it into the pane, click on the wrench symbol (2), then first select the QuantME Constructs category and afterwards QuantME Tasks in the drop-down menu (3).
 Finally, click on Warm-Starting Task within the QuantME Tasks category.
+
+![Modeler First Task](./resources/images/modeler_warm-start-modeling.png)
+
+Configure the Warm-Starting Task using the values shown below.
+Thereby, ``Initial State Warm-Start Egger`` is selected as the warm-starting method, which was introduced in [this paper](https://quantum-journal.org/papers/q-2021-06-17-479/).
+Furthermore, we will use QAOA to solve the MaxCut problem, thus, select ``QAOA`` as the quantum algorithm to warm-start.
+Finally, utilize the ``GW`` algorithm to calculate the initial state to use, as well as ``10`` iterations to use for the approximation.
+
+![Modeler Configure Warm-Start](./resources/images/modeler_warm_start_config.png)
+
+Next, add a second task of type Quantum Circuit Loading Task to load to parameterized QAOA circuit that is later executed in the variational loop.
+The functionality to generate a corresponding quantum circuit is provided by Quokka, therefore, configure the task using ``quokka/maxcut`` as URL.
+Furthermore, connect both tasks with the start event using sequence flow.
 
 TODO
 
