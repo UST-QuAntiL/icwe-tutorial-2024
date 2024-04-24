@@ -81,9 +81,9 @@ Finally, click on Warm-Starting Task within the QuantME Tasks category.
 ![Modeler First Task](./resources/images/modeler_warm-start-modeling.png)
 
 Configure the Warm-Starting Task using the values shown below.
-Thereby, ``Initial State Warm-Start Egger`` is selected as the warm-starting method, which was introduced in [this paper](https://quantum-journal.org/papers/q-2021-06-17-479/).
+Thereby, ``Biased Initial State`` is selected as Warm-Starting pattern and ``Initial State Warm-Start Egger`` as Warm-Starting method.
 Furthermore, we will use QAOA to solve the MaxCut problem, thus, select ``QAOA`` as the quantum algorithm to warm-start.
-Finally, utilize the ``GW`` algorithm to calculate the initial state to use, as well as ``10`` iterations to use for the approximation.
+Finally, utilize the ``Goemans-Williamson`` algorithm to calculate the initial state to use, as well as ``10`` repetitions to use for the approximation.
 
 ![Modeler Configure Warm-Start](./resources/images/modeler_warm_start_config.png)
 
