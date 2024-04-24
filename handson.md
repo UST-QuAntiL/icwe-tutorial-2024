@@ -23,7 +23,7 @@ The use case utilizes the following tools:
 The code required for the hands-on session is available [here](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/2024-icwe-tutorial).
 
 In case you participate in the tutorial on-side and use one of the provided virtual machines, please only download the workflow model available [here](TODO).
-Afterwards, move to [Part 1](#part-1-qaoa-for-maxcut) and use the provided IP to replace the placeholder $IP.
+Afterwards, move to [Part 1](#part-1-quantum-workflow-modeler) and use the provided IP to replace the placeholder $IP.
 
 On Windows, you have to activate long paths for Git to enable cloning and pushing to this repository.
 Thus, execute the following command:
@@ -54,12 +54,22 @@ docker-compose up --build
 ```
 3. Wait until all containers are up and running. This may take some minutes.
 
+## Part 1: Quantum Workflow Modeler
+
+Open the quantum workflow modeler using the following URL: http://$IP:8080
+
+Afterwards, the following screen should be displayed:
+
+![Modeler Initial](./resources/images/modeler-initial.png)
+
+Familiarize yourself with the workflow modeler by dragging and dropping elements from the palette on the right into the modeling pane.
+
+If you are not familiar with BPMN, have a look at the [Camunda introduction](https://camunda.com/bpmn/).
+
+## Part 2: QAOA for MaxCut
+
 TODO
 
-## Part 1: QAOA for MaxCut
-
-TODO
-
-## Part 2: Pattern-based Generation of Quantum Workflows
+## Part 3: Pattern-based Generation of Quantum Workflows
 
 TODO
