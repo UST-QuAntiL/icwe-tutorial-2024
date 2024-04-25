@@ -75,7 +75,7 @@ To model the quantum workflow, the [Quantum Modeling Extension (QuantME)](https:
 
 First, add a Warm-Starting Task after the initial Start Event.
 Warm-starting is used to approximate a solution that is incorporated into the quantum circuit to facilitate the search for the optimal solution.
-Select the Task icon in the palette (1), drag it into the pane, click on the wrench symbol (2), then first select the QuantME Constructs category and afterwards QuantME Tasks in the drop-down menu (3).
+Select the Task icon in the palette (1), drag it into the pane, click on the wrench symbol (2), then first select the QuantME Constructs category, and afterwards QuantME Tasks in the drop-down menu (3).
 Finally, click on Warm-Starting Task within the QuantME Tasks category.
 
 ![Modeler First Task](./resources/images/modeler_warm-start-modeling.png)
@@ -96,13 +96,13 @@ Furthermore, connect both tasks with the start event using sequence flow.
 Due to today's restricted quantum computers, the quantum circuit should be [cut into multiple smaller sub-circuits](https://arxiv.org/pdf/2302.01792), thus, reducing the impact of errors, as well as the limited number of qubits.
 Add a Circuit Cutting Task, which is also available within the QuantME Tasks category.
 Configure the Circuit Cutting Task to use the Cutting Method ``knitting toolbox``, utilizing the implementation provided by the [Circuit Knitting Toolbox](https://qiskit-extensions.github.io/circuit-knitting-toolbox/).
-Furthermore, set Maximum Sub-Circuit width to ``5``, Maximum Number of Cuts to ``2``, and Maximum Number of Sub-Circuits to ``2``.
+Furthermore, set the Maximum Sub-Circuit width to ``5``, the Maximum Number of Cuts to ``2``, and the Maximum Number of Sub-Circuits to ``2``.
 Finally, add an Exclusive Gateway to later join the sequence flow of the optimization loop.
 
 ![Modeler Configure Circuit Cutting](./resources/images/modeler_cutting_config.png)
 
 Next, add a task of type Quantum Circuit Execution Task to execute the loaded quantum circuit on a quantum computer.
-For this example, we configure the task to use ``ibm`` as quantum hardware provider and the ``aer_qasm_simulator`` as QPU.
+For this example, we configure the task to use ``ibm`` as the quantum hardware provider and the ``aer_qasm_simulator`` as QPU.
 The aer_qasm_simulator is a simulator that can be executed locally to avoid queuing times.
 Furthermore, the number of shots, i.e., the number of executions, is set to ``2000``, and it is specified that the circuit to execute was implemented using ``openqasm``.
 
@@ -117,7 +117,7 @@ To reduce the impact of readout errors, add a Readout Error Mitigation Task and 
 
 ![Modeler Configure Readout Error Mitigation](./resources/images/modeler_rem_config.png)
 
-After the mitigation the results of the different sub circuit executions are combined using a Cutting Result Combination Task to receive the overall result.
+After the mitigation, the results of the different sub-circuit executions are combined using a Cutting Result Combination Task to receive the overall result.
 Thereby, the same Cutting Method must be used, i.e., ``knitting toolbox``.
 
 ![Modeler Configure Result Combination](./resources/images/modeler_combination_config.png)
@@ -132,7 +132,7 @@ Additionally, add another Exclusive Gateway to enter the next iteration of the o
 ![Modeler Configure Result Evaluation](./resources/images/modeler_evaluation_config.png)
 
 If another iteration is required, the parameters are optimized using a Parameter Optimization Task.
-Configure the task to utilize ``Cobyla`` as Optimizer.
+Configure the task to utilize ``Cobyla`` as an Optimizer.
 
 ![Modeler Configure Optimizer](./resources/images/modeler_optimization_config.png)
 
