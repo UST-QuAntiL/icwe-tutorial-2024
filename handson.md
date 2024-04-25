@@ -14,7 +14,7 @@ Afterwards, the same workflow is automatically generated based on a set of selec
 The use case utilizes the following tools:
 
 * [Pattern Atlas](https://github.com/PatternAtlas): A graphical tool for authoring and visualizing patterns and pattern languages.
-* [Process View Plugin](https://github.com/UST-QuAntiL/camunda-process-view-plugins): TODO.
+* [Process View Plugin](https://github.com/UST-QuAntiL/camunda-process-view-plugins): A plugin for the Camunda engine to visualize process views.
 * [OpenTOSCA Container](https://github.com/OpenTOSCA/container): A TOSCA-compliant deployment system.
 * [Quantum Workflow Modeler](https://github.com/PlanQK/workflow-modeler): A graphical BPMN modeler to define, transform, and deploy quantum workflows.
 * [Quokka](https://github.com/UST-QuAntiL/Quokka): A microservice ecosystem enabling a service-based execution of quantum algorithms.
