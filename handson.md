@@ -22,9 +22,9 @@ The use case utilizes the following tools:
 
 ## Setup
 
-The code required for the hands-on session is available [here](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/2024-icwe-tutorial).
-
 **In case you participate in the tutorial on-site and use one of the provided virtual machines, move to [Part 1](#quantum-workflow-modeler) and use the provided IP to replace the placeholder $IP.**
+
+The code required for the hands-on session is available [here](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/2024-icwe-tutorial).
 
 On Windows, you have to activate long paths for Git to enable cloning and pushing to this repository.
 Thus, execute the following command:
