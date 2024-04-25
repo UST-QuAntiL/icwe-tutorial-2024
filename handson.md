@@ -22,7 +22,7 @@ The use case utilizes the following tools:
 
 ## Setup
 
-**In case you participate in the tutorial on-site and use one of the provided virtual machines, move to [Part 1](#quantum-workflow-modeler) and use the provided IP to replace the placeholder $IP.**
+**In case you participate in the tutorial on-site and use one of the provided virtual machines, move to [Part 1](https://ust-quantil.github.io/icwe-tutorial-2024/handson.html#quantum-workflow-modeler) and use the provided IP to replace the placeholder $IP.**
 
 The code required for the hands-on session is available [here](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/2024-icwe-tutorial).
 
