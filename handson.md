@@ -209,7 +209,10 @@ Hover over the different QuantME modeling constructs to visualize additional, ta
 
 ![Camunda Quantum View](./resources/images/engine_quantum_view.png)
 
-TODO
+Wait until the token reaches the final user task, then, switch to the Tasklist.
+Select the task item on the left, then click on ``Claim`` to activate the item, and download the result plot using the given URL.
+Afterwards, click on ``Complete`` to terminate the workflow instance.
+Finally, open the downloaded image, visualizing the MaxCut solution for the input graph.
 
 ## Part 2: Pattern-based Generation of Quantum Workflows
 
