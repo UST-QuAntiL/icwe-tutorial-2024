@@ -181,9 +181,19 @@ Finally, to upload the workflow to the Camunda Engine, click on the ``Deploy Wor
 ![Modeler Workflow Deployment](./resources/images/modeler_deploy_workflow.png)
 
 Open the Camunda Engine using the following URL: http://$IP:8090
-Use ``demo`` as username and password to log in:
+Use ``demo`` as username and password to log in, which displays the following screen:
 
 ![Camunda Login](./resources/images/engine_login.png)
+
+Click on ``Cockpit`` to validate that the workflow was successfully uploaded.
+Then, click on ``Processes`` on the top-left and select the workflow from the list.
+This should show a graphical representation of the uploaded workflow.
+
+To instantiate the workflow, click the home button on the top-right, then select ``Tasklist``.
+Next, click on ``Start process`` on the top-right, select the name of the uploaded workflow, and provide the input parameters as shown below:
+
+* ``IBMQ Token``: Enter your IBMQ token, which can be retrieved [here](https://quantum.ibm.com/).
+* ``Noise Model``: Provide the name of a QPU to use the corresponding noise model for the simulator. In the example, we use ``ibm_brisbane``.
 
 TODO
 
