@@ -152,6 +152,18 @@ Hence, use a form of type Generated Task Forms and add a form field to display t
 
 TODO
 
+![Modeler Transformation](./resources/images/modeler_transformation.png)
+
+TODO
+
+![Modeler Service Deployment](./resources/images/modeler_service_deployment.png)
+
+TODO
+
+![Modeler Workflow Deployment](./resources/images/modeler_deploy_workflow.png)
+
+TODO
+
 ## Part 2: Pattern-based Generation of Quantum Workflows
 
 TODO
