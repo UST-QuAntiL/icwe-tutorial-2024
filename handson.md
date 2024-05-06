@@ -204,7 +204,8 @@ Check the variables to trace the current iteration, as well as costs of the opti
 
 ![Camunda Select Instance](./resources/images/engine_instance_selection.png)
 
-TODO
+To activate the quantum view, visualizing the QuantME modeling constructs, as well as quantum specific provenance data, such as calibration data of the QPU, click on ``toggle quantum view`` on the right.
+Hover over the different QuantME modeling constructs to visualize additional, task-specific data:
 
 ![Camunda Quantum View](./resources/images/engine_quantum_view.png)
 
