@@ -154,7 +154,12 @@ Hence, use a form of type Generated Task Forms and add a form field to display t
 
 ![Modeler Configure Sequence Flow 2](./resources/images/modeler_user_task_config.png)
 
-TODO
+Before continuing, store your modeled workflow locally using the ``Save`` button on the top-left.
+
+To execute the workflow, the QuantME modeling constructs must be replaced by standard-compliant BPMN modeling constructs.
+Therefore, click on the ``Transform`` button.
+The resulting native workflow model is displayed below.
+For example, the Warm-Starting Task and Quantum Circuit Loading Task are replaced by two Service Tasks invoking the corresponding services of the Quokka ecosystem based on the configuration attributes.
 
 ![Modeler Transformation](./resources/images/modeler_transformation.png)
 
