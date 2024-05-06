@@ -163,11 +163,19 @@ For example, the Warm-Starting Task and Quantum Circuit Loading Task are replace
 
 ![Modeler Transformation](./resources/images/modeler_transformation.png)
 
-TODO
+In case you experience any problems, the workflow model after transformation is available [here](./resources/code/icwe24-workflow-transformed.bpmn), which can be opened in the modeler to continue from this point.
+
+Next, the required services to execute the workflow model must be deployed.
+For this, deployment models are attached to the activities of the workflow, enabling to deploy the services for these activities.
+Click on the ``OpenTOSCA`` button and then select ``Service Deployment``.
+The popup shows the services that have to be deployed, click on ``Upload CSAR`` to start the deployment process.
+In case you participate in the tutorial on-site and use one of the provided virtual machines, the services are already pre-deployed and are directly bound to the workflow.
+Otherwise, please follow the steps of the deployment dialogue.
 
 ![Modeler Service Deployment](./resources/images/modeler_service_deployment.png)
 
-TODO
+After the binding completes, a corresponding notification is displayed as shown below.
+Finally, to upload the workflow to the Camunda Engine, click on the ``Deploy Workflow`` button:
 
 ![Modeler Workflow Deployment](./resources/images/modeler_deploy_workflow.png)
 
