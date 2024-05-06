@@ -32,4 +32,3 @@ The second session is planned as follows:
 | **16:00 - 17:00** | **Session 2: Orchestrating Hybrid Quantum Applications** |
 | 16:00 - 16:45 | Practical Session: Quantum Workflows ([Instructions](https://ust-quantil.github.io/icwe-tutorial-2024/handson.html), [Source Code](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/2024-icwe-tutorial)) |
 | 16:45 - 17:00 | Evaluation & Q/A (Survey) |
-
