@@ -180,6 +180,23 @@ Finally, to upload the workflow to the Camunda Engine, click on the ``Deploy Wor
 
 ![Modeler Workflow Deployment](./resources/images/modeler_deploy_workflow.png)
 
+Open the Camunda Engine using the following URL: [localhost:8090](http://localhost:8090)
+Use ``demo`` as username and password to log in:
+
+![Camunda Login](./resources/images/engine_login.png)
+
+TODO
+
+![Camunda Start Process](./resources/images/engine_start_process.png)
+
+TODO
+
+![Camunda Select Instance](./resources/images/engine_instance_selection.png)
+
+TODO
+
+![Camunda Quantum View](./resources/images/engine_quantum_view.png)
+
 TODO
 
 ## Part 2: Pattern-based Generation of Quantum Workflows
