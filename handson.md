@@ -168,7 +168,8 @@ In case you experience any problems, the workflow model after transformation is 
 Next, the required services to execute the workflow model must be deployed.
 For this, deployment models are attached to the activities of the workflow, enabling to deploy the services for these activities.
 Click on the ``OpenTOSCA`` button and then select ``Service Deployment``.
-The popup shows the services that have to be deployed, click on ``Upload CSAR`` to start the deployment process.
+The popup shows the services that have to be deployed.
+Click on ``Upload CSAR`` to start the deployment process.
 In case you participate in the tutorial on-site and use one of the provided virtual machines, the services are already pre-deployed and are directly bound to the workflow.
 Otherwise, please follow the steps of the deployment dialogue.
 
@@ -178,6 +179,23 @@ After the binding completes, a corresponding notification is displayed as shown 
 Finally, to upload the workflow to the Camunda Engine, click on the ``Deploy Workflow`` button:
 
 ![Modeler Workflow Deployment](./resources/images/modeler_deploy_workflow.png)
+
+Open the Camunda Engine using the following URL: [localhost:8090](http://localhost:8090)
+Use ``demo`` as username and password to log in:
+
+![Camunda Login](./resources/images/engine_login.png)
+
+TODO
+
+![Camunda Start Process](./resources/images/engine_start_process.png)
+
+TODO
+
+![Camunda Select Instance](./resources/images/engine_instance_selection.png)
+
+TODO
+
+![Camunda Quantum View](./resources/images/engine_quantum_view.png)
 
 TODO
 
