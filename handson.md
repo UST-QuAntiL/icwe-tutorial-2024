@@ -163,11 +163,14 @@ For example, the Warm-Starting Task and Quantum Circuit Loading Task are replace
 
 ![Modeler Transformation](./resources/images/modeler_transformation.png)
 
+In case you experience any problems, the workflow model after transformation is available [here](./resources/code/icwe24-workflow-transformed.bpmn), which can be opened in the modeler to continue from this point.
+
 TODO
 
 ![Modeler Service Deployment](./resources/images/modeler_service_deployment.png)
 
-TODO
+After the binding completes, a corresponding notification is displayed as shown below.
+Finally, to upload the workflow to the Camunda Engine, click on the ``Deploy Workflow`` button:
 
 ![Modeler Workflow Deployment](./resources/images/modeler_deploy_workflow.png)
 
