@@ -73,7 +73,11 @@ If you are not familiar with BPMN, have a look at the [Camunda introduction](htt
 In the first part of the hands-on session, you will model and execute a quantum workflow orchestrating the [Quantum Approximate Optimization Algorithm (QAOA)](https://arxiv.org/pdf/1411.4028.pdf) to solve the Maximum Cut (MaxCut) problem.
 To model the quantum workflow, the [Quantum Modeling Extension (QuantME)](https://www.iaas.uni-stuttgart.de/publications/Weder2020_QuantumWorkflows.pdf) is used.
 
-First, add a Warm-Starting Task after the initial Start Event.
+Please download the initial workflow model available [here](./resources/code/icwe24-workflow-configured-start-event.bpmn).
+It contains a pre-configured Start Event requesting the required input for the workflow execution.
+Open the workflow model by clicking on ``File`` and afterwards ``Open File``.
+
+First, add a Warm-Starting Task after the Start Event.
 Warm-starting is used to approximate a solution that is incorporated into the quantum circuit to facilitate the search for the optimal solution.
 Select the Task icon in the palette (1), drag it into the pane, click on the wrench symbol (2), then first select the QuantME Constructs category, and afterwards QuantME Tasks in the drop-down menu (3).
 Finally, click on Warm-Starting Task within the QuantME Tasks category.
@@ -150,7 +154,12 @@ Hence, use a form of type Generated Task Forms and add a form field to display t
 
 ![Modeler Configure Sequence Flow 2](./resources/images/modeler_user_task_config.png)
 
-TODO
+Before continuing, store your modeled workflow locally using the ``Save`` button on the top-left.
+
+To execute the workflow, the QuantME modeling constructs must be replaced by standard-compliant BPMN modeling constructs.
+Therefore, click on the ``Transform`` button.
+The resulting native workflow model is displayed below.
+For example, the Warm-Starting Task and Quantum Circuit Loading Task are replaced by two Service Tasks invoking the corresponding services of the Quokka ecosystem based on the configuration attributes.
 
 ![Modeler Transformation](./resources/images/modeler_transformation.png)
 
