@@ -195,11 +195,12 @@ Next, click on ``Start process`` on the top-right, select the name of the upload
 * ``IBMQ Token``: Enter your IBMQ token, which can be retrieved [here](https://quantum.ibm.com/).
 * ``Noise Model``: Provide the name of a QPU to use the corresponding noise model for the simulator. In the example, we use ``ibm_brisbane``.
 
-TODO
-
 ![Camunda Start Process](./resources/images/engine_start_process.png)
 
-TODO
+Switch back to the Camunda Cockpit, and select the deployed workflow.
+Then, a running process instance should be shown on the bottom.
+Click on the ID of the instance to visualize the current variables, as well as the position of the token.
+Check the variables to trace the current iteration, as well as costs of the optimization process.
 
 ![Camunda Select Instance](./resources/images/engine_instance_selection.png)
 
