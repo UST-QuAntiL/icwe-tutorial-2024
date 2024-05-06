@@ -180,7 +180,7 @@ Finally, to upload the workflow to the Camunda Engine, click on the ``Deploy Wor
 
 ![Modeler Workflow Deployment](./resources/images/modeler_deploy_workflow.png)
 
-Open the Camunda Engine using the following URL: [localhost:8090](http://localhost:8090)
+Open the Camunda Engine using the following URL: http://$IP:8090
 Use ``demo`` as username and password to log in:
 
 ![Camunda Login](./resources/images/engine_login.png)
