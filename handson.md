@@ -58,7 +58,7 @@ docker-compose up --build
 
 ## Quantum Workflow Modeler
 
-Open the quantum workflow modeler using the following URL: http://$IP:8080
+Open the quantum workflow modeler using the following URL: http://$IP:1893
 
 Afterwards, the following screen should be displayed:
 
