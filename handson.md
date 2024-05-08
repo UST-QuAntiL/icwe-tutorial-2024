@@ -245,10 +245,10 @@ For this use case, we only orchestrate a single quantum algorithm, thus, initial
     ![Modeler Workflow Generation](./resources/images/TODO.png)
 
 5. The generated quantum workflow is displayed below.
-It contains the basic structure of the quantum approximate optimization algorithm, which was loaded from a solution of the corresponding patterns.
-Additionally, the selected augmentation patterns are attached to the subprocess comprising algorithm.
+It comprises the basic structure of the quantum approximate optimization algorithm, which was loaded from a solution of the corresponding patterns.
+Additionally, the selected augmentation patterns are attached to the subprocess orchestrating the QAOA algorithm.
 
     ![Modeler Generated Workflow](./resources/images/pattern_combine_solutions.png)
 
-6. Finally, to execute the generated workflow, follow the steps described in part 1 starting from step 12.
+6. Finally, to transform and execute the generated workflow, follow the steps described in part 1 starting from step 12.
 Thereby, the transformation also removes the patterns and adds corresponding functionality, leading to a native workflow model for execution.
