@@ -82,7 +82,7 @@ Warm-starting is used to approximate a solution that is incorporated into the qu
 Select the Task icon in the palette (1), drag it into the pane, click on the wrench symbol (2), then first select the QuantME Constructs category, and afterwards QuantME Tasks in the drop-down menu (3).
 Finally, click on Warm-Starting Task within the QuantME Tasks category.
 
-![Modeler First Task](./resources/images/modeler_warm-start-modeling.png)
+    ![Modeler First Task](./resources/images/modeler_warm-start-modeling.png)
 
 2. Configure the Warm-Starting Task using the values shown below.
 Thereby, ``Biased Initial State`` is selected as Warm-Starting pattern and ``Initial State Warm-Start Egger`` as Warm-Starting method.
