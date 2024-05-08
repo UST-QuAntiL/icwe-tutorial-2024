@@ -58,7 +58,7 @@ docker-compose up --build
 
 ## Quantum Workflow Modeler
 
-Open the quantum workflow modeler using the following URL: http://$IP:8080
+Open the quantum workflow modeler using the following URL: http://$IP:1893
 
 Afterwards, the following screen should be displayed:
 
@@ -177,25 +177,42 @@ Finally, to upload the workflow to the Camunda Engine, click on the ``Deploy Wor
 
 ![Modeler Workflow Deployment](./resources/images/modeler_deploy_workflow.png)
 
-15. Open the Camunda Engine using the following URL: [localhost:8090](http://localhost:8090)
-Use ``demo`` as username and password to log in:
+15. Open the Camunda Engine using the following URL: http://$IP:8090
+Use ``demo`` as username and password to log in, which displays the following screen:
 
 ![Camunda Login](./resources/images/engine_login.png)
 
-TODO
+16. Click on ``Cockpit`` to validate that the workflow was successfully uploaded.
+Then, click on ``Processes`` on the top-left and select the workflow from the list.
+This should show a graphical representation of the uploaded workflow.
+
+To instantiate the workflow, click the home button on the top-right, then select ``Tasklist``.
+Next, click on ``Start process`` on the top-right, select the name of the uploaded workflow, and provide the input parameters as shown below:
+
+* ``IBMQ Token``: Enter your IBMQ token, which can be retrieved [here](https://quantum.ibm.com/).
+* ``Noise Model``: Provide the name of a QPU to use the corresponding noise model for the simulator. In the example, we use ``ibm_brisbane``.
 
 ![Camunda Start Process](./resources/images/engine_start_process.png)
 
-TODO
+Switch back to the Camunda Cockpit, and select the deployed workflow.
+Then, a running process instance should be shown on the bottom.
+Click on the ID of the instance to visualize the current variables, as well as the position of the token.
+Check the variables to trace the current iteration, as well as costs of the optimization process.
 
 ![Camunda Select Instance](./resources/images/engine_instance_selection.png)
 
-TODO
+To activate the quantum view, visualizing the QuantME modeling constructs, as well as quantum specific provenance data, such as calibration data of the QPU, click on ``toggle quantum view`` on the right.
+Hover over the different QuantME modeling constructs to visualize additional, task-specific data:
 
 ![Camunda Quantum View](./resources/images/engine_quantum_view.png)
 
-TODO
+Wait until the token reaches the final user task, then, switch to the Tasklist.
+Select the task item on the left, then click on ``Claim`` to activate the item, and download the result plot using the given URL.
+Afterwards, click on ``Complete`` to terminate the workflow instance.
+Finally, open the downloaded image, visualizing the MaxCut solution for the input graph.
 
 ## Part 2: Pattern-based Generation of Quantum Workflows
+
+In the second part of the tutorial, we will discuss how to simplify the modeling process, by automatically generating the quantum workflow modeled in the first part based on a set of selected patterns.
 
 TODO
