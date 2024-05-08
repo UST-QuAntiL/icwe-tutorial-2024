@@ -235,7 +235,8 @@ Finally, click on ``Confirm Selection``.
 
     ![Modeler Pattern Selection Overview](./resources/images/TODO.png)
 
-3. TODO
+3. The screen below displays the pattern selection, and enables to add another algorithm pattern.
+For this use case, we only orchestrate a single quantum algorithm, thus, initialize the workflow generation by clicking on ``Done``.
 
     ![Modeler Pattern Selection Overview With QAOA](./resources/images/TODO.png)
 
