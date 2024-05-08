@@ -100,7 +100,7 @@ Furthermore, connect both tasks with the start event using sequence flow.
 4. Due to today's restricted quantum computers, the quantum circuit should be [cut into multiple smaller sub-circuits](https://arxiv.org/pdf/2302.01792), thus, reducing the impact of errors, as well as the limited number of qubits.
 Add a Circuit Cutting Task, which is also available within the QuantME Tasks category.
 Configure the Circuit Cutting Task to use the Cutting Method ``knitting toolbox``, utilizing the implementation provided by the [Circuit Knitting Toolbox](https://qiskit-extensions.github.io/circuit-knitting-toolbox/).
-Furthermore, set the Maximum Sub-Circuit width to ``5``, the Maximum Number of Cuts to ``2``, and the Maximum Number of Sub-Circuits to ``2``.
+Furthermore, set the Maximum Sub-Circuit width to ``4``, the Maximum Number of Cuts to ``2``, and the Maximum Number of Sub-Circuits to ``2``.
 Finally, add an Exclusive Gateway to later join the sequence flow of the optimization loop.
 
 ![Modeler Configure Circuit Cutting](./resources/images/modeler_cutting_config.png)
@@ -160,9 +160,9 @@ For example, the Warm-Starting Task and Quantum Circuit Loading Task are replace
 
 ![Modeler Transformation](./resources/images/modeler_transformation.png)
 
-In case you experience any problems, the workflow model after transformation is available [here](./resources/code/icwe24-workflow-transformed.bpmn), which can be opened in the modeler to continue from this point.
+13. In case you experience any problems, the workflow model after transformation is available [here](./resources/code/icwe24-workflow-transformed.bpmn), which can be opened in the modeler to continue from this point.
 
-13. Next, the required services to execute the workflow model must be deployed.
+    Next, the required services to execute the workflow model must be deployed.
 For this, deployment models are attached to the activities of the workflow, enabling to deploy the services for these activities.
 Click on the ``OpenTOSCA`` button and then select ``Service Deployment``.
 The popup shows the services that have to be deployed.
@@ -184,29 +184,29 @@ Use ``demo`` as username and password to log in, which displays the following sc
 
 16. Click on ``Cockpit`` to validate that the workflow was successfully uploaded.
 Then, click on ``Processes`` on the top-left and select the workflow from the list.
-This should show a graphical representation of the uploaded workflow.
-
+    
+    This should show a graphical representation of the uploaded workflow.
 To instantiate the workflow, click the home button on the top-right, then select ``Tasklist``.
 Next, click on ``Start process`` on the top-right, select the name of the uploaded workflow, and provide the input parameters as shown below:
 
-* ``IBMQ Token``: Enter your IBMQ token, which can be retrieved [here](https://quantum.ibm.com/).
-* ``Noise Model``: Provide the name of a QPU to use the corresponding noise model for the simulator. In the example, we use ``ibm_brisbane``.
+    * ``IBMQ Token``: Enter your IBMQ token, which can be retrieved [here](https://quantum.ibm.com/).
+    * ``Noise Model``: Provide the name of a QPU to use the corresponding noise model for the simulator. In the example, we use ``ibm_brisbane``.
 
 ![Camunda Start Process](./resources/images/engine_start_process.png)
 
-Switch back to the Camunda Cockpit, and select the deployed workflow.
+17. Switch back to the Camunda Cockpit, and select the deployed workflow.
 Then, a running process instance should be shown on the bottom.
 Click on the ID of the instance to visualize the current variables, as well as the position of the token.
 Check the variables to trace the current iteration, as well as costs of the optimization process.
 
 ![Camunda Select Instance](./resources/images/engine_instance_selection.png)
 
-To activate the quantum view, visualizing the QuantME modeling constructs, as well as quantum specific provenance data, such as calibration data of the QPU, click on ``toggle quantum view`` on the right.
+18. To activate the quantum view, visualizing the QuantME modeling constructs, as well as quantum specific provenance data, such as calibration data of the QPU, click on ``toggle quantum view`` on the right.
 Hover over the different QuantME modeling constructs to visualize additional, task-specific data:
 
 ![Camunda Quantum View](./resources/images/engine_quantum_view.png)
 
-Wait until the token reaches the final user task, then, switch to the Tasklist.
+19. Wait until the token reaches the final user task, then, switch to the Tasklist.
 Select the task item on the left, then click on ``Claim`` to activate the item, and download the result plot using the given URL.
 Afterwards, click on ``Complete`` to terminate the workflow instance.
 Finally, open the downloaded image, visualizing the MaxCut solution for the input graph.
