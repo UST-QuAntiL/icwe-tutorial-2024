@@ -75,7 +75,8 @@ To model the quantum workflow, the [Quantum Modeling Extension (QuantME)](https:
 
 Please download the initial workflow model available [here](./resources/code/icwe24-workflow-configured-start-event.bpmn).
 It contains a pre-configured Start Event requesting the required input for the workflow execution.
-Open the workflow model by clicking on ``File`` and afterwards ``Open File``.
+Open the workflow model by clicking on ``File`` and ``Open File``.
+Afterwards, proceed with the following steps to model and execute the quantum workflow orchestrating QAOA:
 
 1. Add a Warm-Starting Task after the Start Event.
 Warm-starting is used to approximate a solution that is incorporated into the quantum circuit to facilitate the search for the optimal solution.
