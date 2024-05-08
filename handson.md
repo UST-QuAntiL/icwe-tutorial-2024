@@ -230,7 +230,7 @@ Click on the ``Select Patterns`` button to start the pattern selection for the u
 
 2. Click on the ``+`` sign on the right to add a new algorithm pattern.
 To generate the workflow modeled in the first part of the tutorial, we select ``Quantum Approximate Optimization Algorithm (QAOA)`` as the algorithm pattern.
-TODO
+Furthermore, add the ... TODO
 
     ![Modeler Pattern Selection Overview](./resources/images/TODO.png)
 
@@ -247,3 +247,4 @@ TODO
     ![Modeler Generated Workflow](./resources/images/TODO.png)
 
 6. Finally, to execute the generated workflow, follow the steps described in part 1 starting from step 12.
+Thereby, the transformation also removes the patterns and adds corresponding functionality, leading to a native workflow model for execution.
