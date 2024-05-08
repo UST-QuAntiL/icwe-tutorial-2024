@@ -143,7 +143,7 @@ Configure the task to utilize ``Cobyla`` as an Optimizer.
 Afterwards, add the following expression to the sequence flow between the second Exclusive Gateway and the Optimizer Task as shown below:
 ``${ execution.getVariable('converged')== null || execution.getVariable('converged') == 'false'}``
 
-![Modeler Configure Sequence Flow](./resources/images/modeler_uppergateway_config.png)
+    ![Modeler Configure Sequence Flow](./resources/images/modeler_uppergateway_config.png)
 
 11. Finally, add a User Task and connect the second Exclusive Gateway to it.
 Furthermore, use the following condition: ``${ execution.getVariable('converged')!= null && execution.getVariable('converged') == 'true'}``
@@ -151,14 +151,14 @@ The Result Evaluation Task generates an image to visualize the identified MaxCut
 Thus, the User Task has to be configured to enable analyzing this image.
 Hence, use a form of type Generated Task Forms and add a form field to display the URL of the result image as shown below:
 
-![Modeler Configure Sequence Flow 2](./resources/images/modeler_user_task_config.png)
+    ![Modeler Configure Sequence Flow 2](./resources/images/modeler_user_task_config.png)
 
 12. To execute the workflow, the QuantME modeling constructs must be replaced by standard-compliant BPMN modeling constructs.
 Therefore, click on the ``Transform`` button.
 The resulting native workflow model is displayed below.
 For example, the Warm-Starting Task and Quantum Circuit Loading Task are replaced by two Service Tasks invoking the corresponding services of the Quokka ecosystem based on the configuration attributes.
 
-![Modeler Transformation](./resources/images/modeler_transformation.png)
+    ![Modeler Transformation](./resources/images/modeler_transformation.png)
 
 13. In case you experience any problems, the workflow model after transformation is available [here](./resources/code/icwe24-workflow-transformed.bpmn), which can be opened in the modeler to continue from this point.
 
@@ -170,17 +170,17 @@ Click on ``Upload CSAR`` to start the deployment process.
 In case you participate in the tutorial on-site and use one of the provided virtual machines, the services are already pre-deployed and are directly bound to the workflow.
 Otherwise, please follow the steps of the deployment dialogue.
 
-![Modeler Service Deployment](./resources/images/modeler_service_deployment.png)
+    ![Modeler Service Deployment](./resources/images/modeler_service_deployment.png)
 
 14. After the binding completes, a corresponding notification is displayed as shown below.
 Finally, to upload the workflow to the Camunda Engine, click on the ``Deploy Workflow`` button:
 
-![Modeler Workflow Deployment](./resources/images/modeler_deploy_workflow.png)
+    ![Modeler Workflow Deployment](./resources/images/modeler_deploy_workflow.png)
 
 15. Open the Camunda Engine using the following URL: http://$IP:8090
 Use ``demo`` as username and password to log in, which displays the following screen:
 
-![Camunda Login](./resources/images/engine_login.png)
+    ![Camunda Login](./resources/images/engine_login.png)
 
 16. Click on ``Cockpit`` to validate that the workflow was successfully uploaded.
 Then, click on ``Processes`` on the top-left and select the workflow from the list.
@@ -192,19 +192,19 @@ Next, click on ``Start process`` on the top-right, select the name of the upload
     * ``IBMQ Token``: Enter your IBMQ token, which can be retrieved [here](https://quantum.ibm.com/).
     * ``Noise Model``: Provide the name of a QPU to use the corresponding noise model for the simulator. In the example, we use ``ibm_brisbane``.
 
-![Camunda Start Process](./resources/images/engine_start_process.png)
+    ![Camunda Start Process](./resources/images/engine_start_process.png)
 
 17. Switch back to the Camunda Cockpit, and select the deployed workflow.
 Then, a running process instance should be shown on the bottom.
 Click on the ID of the instance to visualize the current variables, as well as the position of the token.
 Check the variables to trace the current iteration, as well as costs of the optimization process.
 
-![Camunda Select Instance](./resources/images/engine_instance_selection.png)
+    ![Camunda Select Instance](./resources/images/engine_instance_selection.png)
 
 18. To activate the quantum view, visualizing the QuantME modeling constructs, as well as quantum specific provenance data, such as calibration data of the QPU, click on ``toggle quantum view`` on the right.
 Hover over the different QuantME modeling constructs to visualize additional, task-specific data:
 
-![Camunda Quantum View](./resources/images/engine_quantum_view.png)
+    ![Camunda Quantum View](./resources/images/engine_quantum_view.png)
 
 19. Wait until the token reaches the final user task, then, switch to the Tasklist.
 Select the task item on the left, then click on ``Claim`` to activate the item, and download the result plot using the given URL.
