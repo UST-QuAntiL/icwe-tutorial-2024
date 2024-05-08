@@ -144,7 +144,7 @@ Configure the task to utilize ``Cobyla`` as an Optimizer.
 Afterwards, add the following expression to the sequence flow between the second Exclusive Gateway and the Optimizer Task as shown below:
 ``${ execution.getVariable('converged')== null || execution.getVariable('converged') == 'false'}``
 
-    ![Modeler Configure Sequence Flow](./resources/images/modeler_uppergateway_config.png)
+    [![Modeler Configure Sequence Flow](./resources/images/modeler_uppergateway_config.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/modeler_uppergateway_config.png)
 
 11. Finally, add a User Task and connect the second Exclusive Gateway to it.
 Furthermore, use the following condition: ``${ execution.getVariable('converged')!= null && execution.getVariable('converged') == 'true'}``
@@ -152,14 +152,14 @@ The Result Evaluation Task generates an image to visualize the identified MaxCut
 Thus, the User Task has to be configured to enable analyzing this image.
 Hence, use a form of type Generated Task Forms and add a form field to display the URL of the result image as shown below:
 
-    ![Modeler Configure Sequence Flow 2](./resources/images/modeler_user_task_config.png)
+    [![Modeler Configure Sequence Flow 2](./resources/images/modeler_user_task_config.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/modeler_user_task_config.png)
 
 12. To execute the workflow, the QuantME modeling constructs must be replaced by standard-compliant BPMN modeling constructs.
 Therefore, click on the ``Transform`` button.
 The resulting native workflow model is displayed below.
 For example, the Warm-Starting Task and Quantum Circuit Loading Task are replaced by two Service Tasks invoking the corresponding services of the Quokka ecosystem based on the configuration attributes.
 
-    ![Modeler Transformation](./resources/images/modeler_transformation.png)
+    [![Modeler Transformation](./resources/images/modeler_transformation.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/modeler_transformation.png)
 
 13. In case you experience any problems, the workflow model after transformation is available [here](./resources/code/icwe24-workflow-transformed.bpmn), which can be opened in the modeler to continue from this point.
 
@@ -171,12 +171,12 @@ Click on ``Upload CSAR`` to start the deployment process.
 In case you participate in the tutorial on-site and use one of the provided virtual machines, the services are already pre-deployed and are directly bound to the workflow.
 Otherwise, please follow the steps of the deployment dialogue.
 
-    ![Modeler Service Deployment](./resources/images/modeler_service_deployment.png)
+    [![Modeler Service Deployment](./resources/images/modeler_service_deployment.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/modeler_service_deployment.png)
 
 14. After the binding completes, a corresponding notification is displayed as shown below.
 Finally, to upload the workflow to the Camunda Engine, click on the ``Deploy Workflow`` button:
 
-    ![Modeler Workflow Deployment](./resources/images/modeler_deploy_workflow.png)
+    [![Modeler Workflow Deployment](./resources/images/modeler_deploy_workflow.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/modeler_deploy_workflow.png)
 
 15. Open the Camunda Engine using the following URL: http://$IP:8090
 Use ``demo`` as username and password to log in, which displays the following screen:
