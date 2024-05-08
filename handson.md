@@ -226,19 +226,19 @@ For the generation of quantum workflows, we distinguish three categories of patt
 (iii) Augmentation patterns, supporting the enhancement of the quantum workflow by incorporating additional features or elements, such as warm-starting or circuit cutting.
 Click on the ``Select Patterns`` button to start the pattern selection for the use case.
 
-    ![Modeler Pattern Selection Intro](./resources/images/TODO.png)
+    ![Modeler Pattern Selection Intro](./resources/images/pattern_selection_initial.png)
 
 2. Click on the ``+`` sign on the right to add a new algorithm pattern.
 To generate the workflow modeled in the first part of the tutorial, we select ``Quantum Approximate Optimization Algorithm (QAOA)`` as the algorithm pattern.
 Furthermore, add the ``Circuit Cutting`` pattern, ``Biased Initial State`` pattern, and the ``Readout Error Mitigation`` from the Augmentation Pattern category.
 Finally, click on ``Confirm Selection``.
 
-    ![Modeler Pattern Selection Overview](./resources/images/TODO.png)
+    ![Modeler Pattern Selection Overview](./resources/images/pattern_selection_selection.png)
 
 3. The screen below displays the current pattern selection, and enables to add another algorithm pattern.
 For this use case, we only orchestrate a single quantum algorithm, thus, initialize the workflow generation by clicking on ``Done``.
 
-    ![Modeler Pattern Selection Overview With QAOA](./resources/images/TODO.png)
+    ![Modeler Pattern Selection Overview With QAOA](./resources/images/pattern_selection_overview.png)
 
 4. TODO
 
@@ -246,7 +246,7 @@ For this use case, we only orchestrate a single quantum algorithm, thus, initial
 
 5. TODO
 
-    ![Modeler Generated Workflow](./resources/images/TODO.png)
+    ![Modeler Generated Workflow](./resources/images/pattern_combine_solutions.png)
 
 6. Finally, to execute the generated workflow, follow the steps described in part 1 starting from step 12.
 Thereby, the transformation also removes the patterns and adds corresponding functionality, leading to a native workflow model for execution.
