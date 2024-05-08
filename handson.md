@@ -230,7 +230,8 @@ Click on the ``Select Patterns`` button to start the pattern selection for the u
 
 2. Click on the ``+`` sign on the right to add a new algorithm pattern.
 To generate the workflow modeled in the first part of the tutorial, we select ``Quantum Approximate Optimization Algorithm (QAOA)`` as the algorithm pattern.
-Furthermore, add the ... TODO
+Furthermore, add the ``Circuit Cutting`` pattern, ``Biased Initial State`` pattern, and the ``Readout Error Mitigation`` from the Augmentation Pattern category.
+Finally, click on ``Confirm Selection``.
 
     ![Modeler Pattern Selection Overview](./resources/images/TODO.png)
 
