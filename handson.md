@@ -233,19 +233,19 @@ To generate the workflow modeled in the first part of the tutorial, we select ``
 Furthermore, add the ``Circuit Cutting`` pattern, ``Biased Initial State`` pattern, and the ``Readout Error Mitigation`` from the Augmentation Pattern category.
 Finally, click on ``Confirm Selection``.
 
-    ![Modeler Pattern Selection Overview](./resources/images/pattern_selection_selection.png)
+    [![Modeler Pattern Selection Overview](./resources/images/pattern_selection_selection.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/pattern_selection_selection.png)
 
 3. The screen below displays the current pattern selection, and enables to add another algorithm pattern.
 For this use case, we only orchestrate a single quantum algorithm, thus, initialize the workflow generation by clicking on ``Done``.
 Finally, click on ``Combine Solutions``.
 
-    ![Modeler Pattern Selection Overview With QAOA](./resources/images/pattern_selection_overview.png)
+    [![Modeler Pattern Selection Overview With QAOA](./resources/images/pattern_selection_overview.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/pattern_selection_overview.png)
 
 4. The generated quantum workflow is displayed below.
 It comprises the basic structure of the quantum approximate optimization algorithm, which was loaded from a solution of the corresponding pattern.
 Additionally, the selected augmentation patterns are attached to the subprocess orchestrating the QAOA algorithm.
 
-    ![Modeler Generated Workflow](./resources/images/pattern_combine_solutions.png)
+    [![Modeler Generated Workflow](./resources/images/pattern_combine_solutions.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/pattern_combine_solutions.png)
 
 5. Finally, to transform and execute the generated workflow, follow the steps described in part 1 starting from step 12.
 Thereby, the transformation also removes the patterns and adds corresponding functionality, leading to a native workflow model for execution.
