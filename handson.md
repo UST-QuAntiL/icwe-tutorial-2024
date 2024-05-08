@@ -236,8 +236,14 @@ TODO
 
 3. TODO
 
+    ![Modeler Pattern Selection Overview With QAOA](./resources/images/TODO.png)
+
 4. TODO
 
+    ![Modeler Workflow Generation](./resources/images/TODO.png)
+
 5. TODO
+
+    ![Modeler Generated Workflow](./resources/images/TODO.png)
 
 6. Finally, to execute the generated workflow, follow the steps described in part 1 starting from step 12.
