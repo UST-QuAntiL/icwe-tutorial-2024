@@ -237,18 +237,15 @@ Finally, click on ``Confirm Selection``.
 
 3. The screen below displays the current pattern selection, and enables to add another algorithm pattern.
 For this use case, we only orchestrate a single quantum algorithm, thus, initialize the workflow generation by clicking on ``Done``.
+Finally, click on ``Combine Solutions``.
 
     ![Modeler Pattern Selection Overview With QAOA](./resources/images/pattern_selection_overview.png)
 
-4. TODO
-
-    ![Modeler Workflow Generation](./resources/images/TODO.png)
-
-5. The generated quantum workflow is displayed below.
+4. The generated quantum workflow is displayed below.
 It comprises the basic structure of the quantum approximate optimization algorithm, which was loaded from a solution of the corresponding patterns.
 Additionally, the selected augmentation patterns are attached to the subprocess orchestrating the QAOA algorithm.
 
     ![Modeler Generated Workflow](./resources/images/pattern_combine_solutions.png)
 
-6. Finally, to transform and execute the generated workflow, follow the steps described in part 1 starting from step 12.
+5. Finally, to transform and execute the generated workflow, follow the steps described in part 1 starting from step 12.
 Thereby, the transformation also removes the patterns and adds corresponding functionality, leading to a native workflow model for execution.
