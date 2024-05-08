@@ -89,13 +89,13 @@ Thereby, ``Biased Initial State`` is selected as Warm-Starting pattern and ``Ini
 Furthermore, we will use QAOA to solve the MaxCut problem, thus, select ``QAOA`` as the quantum algorithm to warm-start.
 Finally, utilize the ``Goemans-Williamson`` algorithm to calculate the initial state to use, as well as ``10`` repetitions to use for the approximation.
 
-![Modeler Configure Warm-Start](./resources/images/modeler_warm_start_config.png)
+    ![Modeler Configure Warm-Start](./resources/images/modeler_warm_start_config.png)
 
 3. Next, add a second task of type Quantum Circuit Loading Task to load to parameterized QAOA circuit that is later executed in the variational loop.
 The functionality to generate a corresponding quantum circuit is provided by Quokka, therefore, configure the task using ``quokka/maxcut`` as URL.
 Furthermore, connect both tasks with the start event using sequence flow.
 
-![Modeler Configure Circuit Loading](./resources/images/modeler_loading_config.png)
+    ![Modeler Configure Circuit Loading](./resources/images/modeler_loading_config.png)
 
 4. Due to today's restricted quantum computers, the quantum circuit should be [cut into multiple smaller sub-circuits](https://arxiv.org/pdf/2302.01792), thus, reducing the impact of errors, as well as the limited number of qubits.
 Add a Circuit Cutting Task, which is also available within the QuantME Tasks category.
@@ -103,14 +103,14 @@ Configure the Circuit Cutting Task to use the Cutting Method ``knitting toolbox`
 Furthermore, set the Maximum Sub-Circuit width to ``4``, the Maximum Number of Cuts to ``2``, and the Maximum Number of Sub-Circuits to ``2``.
 Finally, add an Exclusive Gateway to later join the sequence flow of the optimization loop.
 
-![Modeler Configure Circuit Cutting](./resources/images/modeler_cutting_config.png)
+    ![Modeler Configure Circuit Cutting](./resources/images/modeler_cutting_config.png)
 
 5. Next, add a task of type Quantum Circuit Execution Task to execute the loaded quantum circuit on a quantum computer.
 For this example, we configure the task to use ``ibm`` as the quantum hardware provider and the ``aer_qasm_simulator`` as QPU.
 The aer_qasm_simulator is a simulator that can be executed locally to avoid queuing times.
 Furthermore, the number of shots, i.e., the number of executions, is set to ``2000``, and it is specified that the circuit to execute was implemented using ``openqasm``.
 
-![Modeler Configure Circuit Execution](./resources/images/modeler_execution_config.png)
+    ![Modeler Configure Circuit Execution](./resources/images/modeler_execution_config.png)
 
 6. To reduce the impact of readout errors, add a Readout Error Mitigation Task and configure it as follows:
    * Provider: ``ibm``
@@ -118,12 +118,12 @@ Furthermore, the number of shots, i.e., the number of executions, is set to ``20
    * Mitigation Method: ``Matrix Inversion``
    * Calibration Matrix Generation Method: ``Full Matrix``
 
-![Modeler Configure Readout Error Mitigation](./resources/images/modeler_rem_config.png)
+    ![Modeler Configure Readout Error Mitigation](./resources/images/modeler_rem_config.png)
 
 7. After the mitigation, the results of the different sub-circuit executions are combined using a Cutting Result Combination Task to receive the overall result.
 Thereby, the same Cutting Method must be used, i.e., ``knitting toolbox``.
 
-![Modeler Configure Result Combination](./resources/images/modeler_combination_config.png)
+    ![Modeler Configure Result Combination](./resources/images/modeler_combination_config.png)
 
 8. To evaluate the quality of the results, add a Result Evaluation Task and configure it as follows:
 
@@ -132,12 +132,12 @@ Thereby, the same Cutting Method must be used, i.e., ``knitting toolbox``.
    
    Additionally, add another Exclusive Gateway to enter the next iteration of the optimization loop if required.
 
-![Modeler Configure Result Evaluation](./resources/images/modeler_evaluation_config.png)
+    ![Modeler Configure Result Evaluation](./resources/images/modeler_evaluation_config.png)
 
 9. If another iteration is required, the parameters are optimized using a Parameter Optimization Task.
 Configure the task to utilize ``Cobyla`` as an Optimizer.
 
-![Modeler Configure Optimizer](./resources/images/modeler_optimization_config.png)
+    ![Modeler Configure Optimizer](./resources/images/modeler_optimization_config.png)
 
 10. Connect the Optimizer Task to the first Exclusive Gateway.
 Afterwards, add the following expression to the sequence flow between the second Exclusive Gateway and the Optimizer Task as shown below:
