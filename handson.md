@@ -226,8 +226,12 @@ For the generation of quantum workflows, we distinguish three categories of patt
 (iii) Augmentation patterns, supporting the enhancement of the quantum workflow by incorporating additional features or elements, such as warm-starting or circuit cutting
 Click on the ``Select Patterns`` button to start the pattern selection for the use case.
 
-    ![Modeler Pattern Selection](./resources/images/TODO.png)
+    ![Modeler Pattern Selection Intro](./resources/images/TODO.png)
 
-2. TODO
+2. Click on the ``+`` sign on the right to add a new algorithm pattern.
+To generate the workflow modeled in the first part of the tutorial, we select ``Quantum Approximate Optimization Algorithm (QAOA)`` as algorithm pattern.
+TODO
+
+    ![Modeler Pattern Selection Overview](./resources/images/TODO.png)
 
 TODO
