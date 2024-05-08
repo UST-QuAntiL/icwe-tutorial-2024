@@ -81,7 +81,7 @@ Afterwards, proceed with the following steps to model and execute the quantum wo
 1. Add a Warm-Starting Task after the Start Event.
 Warm-starting is used to approximate a solution that is incorporated into the quantum circuit to facilitate the search for the optimal solution.
 Select the Task icon in the palette (1), drag it into the pane, click on the wrench symbol (2), then first select the QuantME Constructs category, and afterwards QuantME Tasks in the drop-down menu (3).
-Finally, click on Warm-Starting Task within the QuantME Tasks category.
+Finally, click on Warm-Starting Task within the QuantME Tasks category (4).
 
     ![Modeler First Task](./resources/images/modeler_warm-start-modeling.png)
 
