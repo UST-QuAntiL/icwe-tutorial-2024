@@ -62,7 +62,7 @@ Open the quantum workflow modeler using the following URL: http://$IP:1893
 
 Afterwards, the following screen should be displayed:
 
-[![Modeler Initial](./resources/images/modeler_initial.png)](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/2024-icwe-tutorial/resources/images/modeler_initial.png)
+[![Modeler Initial](./resources/images/modeler_initial.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/modeler_initial.png)
 
 Familiarize yourself with the workflow modeler by dragging and dropping elements from the palette on the right into the modeling pane.
 
