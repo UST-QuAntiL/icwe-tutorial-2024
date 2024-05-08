@@ -77,27 +77,27 @@ Please download the initial workflow model available [here](./resources/code/icw
 It contains a pre-configured Start Event requesting the required input for the workflow execution.
 Open the workflow model by clicking on ``File`` and afterwards ``Open File``.
 
-First, add a Warm-Starting Task after the Start Event.
+1. Add a Warm-Starting Task after the Start Event.
 Warm-starting is used to approximate a solution that is incorporated into the quantum circuit to facilitate the search for the optimal solution.
 Select the Task icon in the palette (1), drag it into the pane, click on the wrench symbol (2), then first select the QuantME Constructs category, and afterwards QuantME Tasks in the drop-down menu (3).
 Finally, click on Warm-Starting Task within the QuantME Tasks category.
 
 ![Modeler First Task](./resources/images/modeler_warm-start-modeling.png)
 
-Configure the Warm-Starting Task using the values shown below.
+2. Configure the Warm-Starting Task using the values shown below.
 Thereby, ``Biased Initial State`` is selected as Warm-Starting pattern and ``Initial State Warm-Start Egger`` as Warm-Starting method.
 Furthermore, we will use QAOA to solve the MaxCut problem, thus, select ``QAOA`` as the quantum algorithm to warm-start.
 Finally, utilize the ``Goemans-Williamson`` algorithm to calculate the initial state to use, as well as ``10`` repetitions to use for the approximation.
 
 ![Modeler Configure Warm-Start](./resources/images/modeler_warm_start_config.png)
 
-Next, add a second task of type Quantum Circuit Loading Task to load to parameterized QAOA circuit that is later executed in the variational loop.
+3. Next, add a second task of type Quantum Circuit Loading Task to load to parameterized QAOA circuit that is later executed in the variational loop.
 The functionality to generate a corresponding quantum circuit is provided by Quokka, therefore, configure the task using ``quokka/maxcut`` as URL.
 Furthermore, connect both tasks with the start event using sequence flow.
 
 ![Modeler Configure Circuit Loading](./resources/images/modeler_loading_config.png)
 
-Due to today's restricted quantum computers, the quantum circuit should be [cut into multiple smaller sub-circuits](https://arxiv.org/pdf/2302.01792), thus, reducing the impact of errors, as well as the limited number of qubits.
+4. Due to today's restricted quantum computers, the quantum circuit should be [cut into multiple smaller sub-circuits](https://arxiv.org/pdf/2302.01792), thus, reducing the impact of errors, as well as the limited number of qubits.
 Add a Circuit Cutting Task, which is also available within the QuantME Tasks category.
 Configure the Circuit Cutting Task to use the Cutting Method ``knitting toolbox``, utilizing the implementation provided by the [Circuit Knitting Toolbox](https://qiskit-extensions.github.io/circuit-knitting-toolbox/).
 Furthermore, set the Maximum Sub-Circuit width to ``5``, the Maximum Number of Cuts to ``2``, and the Maximum Number of Sub-Circuits to ``2``.
@@ -105,48 +105,47 @@ Finally, add an Exclusive Gateway to later join the sequence flow of the optimiz
 
 ![Modeler Configure Circuit Cutting](./resources/images/modeler_cutting_config.png)
 
-Next, add a task of type Quantum Circuit Execution Task to execute the loaded quantum circuit on a quantum computer.
+5. Next, add a task of type Quantum Circuit Execution Task to execute the loaded quantum circuit on a quantum computer.
 For this example, we configure the task to use ``ibm`` as the quantum hardware provider and the ``aer_qasm_simulator`` as QPU.
 The aer_qasm_simulator is a simulator that can be executed locally to avoid queuing times.
 Furthermore, the number of shots, i.e., the number of executions, is set to ``2000``, and it is specified that the circuit to execute was implemented using ``openqasm``.
 
 ![Modeler Configure Circuit Execution](./resources/images/modeler_execution_config.png)
 
-To reduce the impact of readout errors, add a Readout Error Mitigation Task and configure it as follows:
-
-* Provider: ``ibm``
-* QPU: ``aer_qasm_simulator``
-* Mitigation Method: ``Matrix Inversion``
-* Calibration Matrix Generation Method: ``Full Matrix``
+6. To reduce the impact of readout errors, add a Readout Error Mitigation Task and configure it as follows:
+   * Provider: ``ibm``
+   * QPU: ``aer_qasm_simulator``
+   * Mitigation Method: ``Matrix Inversion``
+   * Calibration Matrix Generation Method: ``Full Matrix``
 
 ![Modeler Configure Readout Error Mitigation](./resources/images/modeler_rem_config.png)
 
-After the mitigation, the results of the different sub-circuit executions are combined using a Cutting Result Combination Task to receive the overall result.
+7. After the mitigation, the results of the different sub-circuit executions are combined using a Cutting Result Combination Task to receive the overall result.
 Thereby, the same Cutting Method must be used, i.e., ``knitting toolbox``.
 
 ![Modeler Configure Result Combination](./resources/images/modeler_combination_config.png)
 
-To evaluate the quality of the results, add a Result Evaluation Task and configure it as follows:
+8. To evaluate the quality of the results, add a Result Evaluation Task and configure it as follows:
 
-* Objective Function: ``Expectation Value``
-* Cost function to use: ``maxcut``
-
-Additionally, add another Exclusive Gateway to enter the next iteration of the optimization loop if required.
+   * Objective Function: ``Expectation Value``
+   * Cost function to use: ``maxcut``
+   
+   Additionally, add another Exclusive Gateway to enter the next iteration of the optimization loop if required.
 
 ![Modeler Configure Result Evaluation](./resources/images/modeler_evaluation_config.png)
 
-If another iteration is required, the parameters are optimized using a Parameter Optimization Task.
+9. If another iteration is required, the parameters are optimized using a Parameter Optimization Task.
 Configure the task to utilize ``Cobyla`` as an Optimizer.
 
 ![Modeler Configure Optimizer](./resources/images/modeler_optimization_config.png)
 
-Connect the Optimizer Task to the first Exclusive Gateway.
+10. Connect the Optimizer Task to the first Exclusive Gateway.
 Afterwards, add the following expression to the sequence flow between the second Exclusive Gateway and the Optimizer Task as shown below:
 ``${ execution.getVariable('converged')== null || execution.getVariable('converged') == 'false'}``
 
 ![Modeler Configure Sequence Flow](./resources/images/modeler_uppergateway_config.png)
 
-Finally, add a User Task and connect the second Exclusive Gateway to it.
+11. Finally, add a User Task and connect the second Exclusive Gateway to it.
 Furthermore, use the following condition: ``${ execution.getVariable('converged')!= null && execution.getVariable('converged') == 'true'}``
 The Result Evaluation Task generates an image to visualize the identified MaxCut.
 Thus, the User Task has to be configured to enable analyzing this image.
@@ -154,9 +153,7 @@ Hence, use a form of type Generated Task Forms and add a form field to display t
 
 ![Modeler Configure Sequence Flow 2](./resources/images/modeler_user_task_config.png)
 
-Before continuing, store your modeled workflow locally using the ``Save`` button on the top-left.
-
-To execute the workflow, the QuantME modeling constructs must be replaced by standard-compliant BPMN modeling constructs.
+12. To execute the workflow, the QuantME modeling constructs must be replaced by standard-compliant BPMN modeling constructs.
 Therefore, click on the ``Transform`` button.
 The resulting native workflow model is displayed below.
 For example, the Warm-Starting Task and Quantum Circuit Loading Task are replaced by two Service Tasks invoking the corresponding services of the Quokka ecosystem based on the configuration attributes.
@@ -165,7 +162,7 @@ For example, the Warm-Starting Task and Quantum Circuit Loading Task are replace
 
 In case you experience any problems, the workflow model after transformation is available [here](./resources/code/icwe24-workflow-transformed.bpmn), which can be opened in the modeler to continue from this point.
 
-Next, the required services to execute the workflow model must be deployed.
+13. Next, the required services to execute the workflow model must be deployed.
 For this, deployment models are attached to the activities of the workflow, enabling to deploy the services for these activities.
 Click on the ``OpenTOSCA`` button and then select ``Service Deployment``.
 The popup shows the services that have to be deployed.
@@ -175,12 +172,12 @@ Otherwise, please follow the steps of the deployment dialogue.
 
 ![Modeler Service Deployment](./resources/images/modeler_service_deployment.png)
 
-After the binding completes, a corresponding notification is displayed as shown below.
+14. After the binding completes, a corresponding notification is displayed as shown below.
 Finally, to upload the workflow to the Camunda Engine, click on the ``Deploy Workflow`` button:
 
 ![Modeler Workflow Deployment](./resources/images/modeler_deploy_workflow.png)
 
-Open the Camunda Engine using the following URL: [localhost:8090](http://localhost:8090)
+15. Open the Camunda Engine using the following URL: [localhost:8090](http://localhost:8090)
 Use ``demo`` as username and password to log in:
 
 ![Camunda Login](./resources/images/engine_login.png)
