@@ -242,7 +242,7 @@ Finally, click on ``Combine Solutions``.
     ![Modeler Pattern Selection Overview With QAOA](./resources/images/pattern_selection_overview.png)
 
 4. The generated quantum workflow is displayed below.
-It comprises the basic structure of the quantum approximate optimization algorithm, which was loaded from a solution of the corresponding patterns.
+It comprises the basic structure of the quantum approximate optimization algorithm, which was loaded from a solution of the corresponding pattern.
 Additionally, the selected augmentation patterns are attached to the subprocess orchestrating the QAOA algorithm.
 
     ![Modeler Generated Workflow](./resources/images/pattern_combine_solutions.png)
