@@ -90,7 +90,7 @@ Thereby, ``Biased Initial State`` is selected as Warm-Starting pattern and ``Ini
 Furthermore, we will use QAOA to solve the MaxCut problem, thus, select ``QAOA`` as the quantum algorithm to warm-start.
 Finally, utilize the ``Goemans-Williamson`` algorithm to calculate the initial state to use, as well as ``10`` repetitions to use for the approximation.
 
-    [![Modeler Configure Warm-Start](./resources/images/modeler_warm_start_config.png)(https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/modeler_warm_start_config.png)]
+    [![Modeler Configure Warm-Start](./resources/images/modeler_warm_start_config.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/modeler_warm_start_config.png)]
 
 3. Next, add a second task of type Quantum Circuit Loading Task to load to parameterized QAOA circuit that is later executed in the variational loop.
 The functionality to generate a corresponding quantum circuit is provided by Quokka, therefore, configure the task using ``quokka/maxcut`` as URL.
@@ -181,7 +181,7 @@ Finally, to upload the workflow to the Camunda Engine, click on the ``Deploy Wor
 15. Open the Camunda Engine using the following URL: http://$IP:8090
 Use ``demo`` as username and password to log in, which displays the following screen:
 
-    ![Camunda Login](./resources/images/engine_login.png)
+    [![Camunda Login](./resources/images/engine_login.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/engine_login.png)
 
 16. Click on ``Cockpit`` to validate that the workflow was successfully uploaded.
 Then, click on ``Processes`` on the top-left and select the workflow from the list.
