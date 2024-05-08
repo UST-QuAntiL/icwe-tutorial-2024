@@ -90,7 +90,7 @@ Thereby, ``Biased Initial State`` is selected as Warm-Starting pattern and ``Ini
 Furthermore, we will use QAOA to solve the MaxCut problem, thus, select ``QAOA`` as the quantum algorithm to warm-start.
 Finally, utilize the ``Goemans-Williamson`` algorithm to calculate the initial state to use, as well as ``10`` repetitions to use for the approximation.
 
-    [![Modeler Configure Warm-Start](./resources/images/modeler_warm_start_config.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/modeler_warm_start_config.png)]
+    [![Modeler Configure Warm-Start](./resources/images/modeler_warm_start_config.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/modeler_warm_start_config.png)
 
 3. Next, add a second task of type Quantum Circuit Loading Task to load to parameterized QAOA circuit that is later executed in the variational loop.
 The functionality to generate a corresponding quantum circuit is provided by Quokka, therefore, configure the task using ``quokka/maxcut`` as URL.
@@ -193,19 +193,19 @@ Next, click on ``Start process`` on the top-right, select the name of the upload
     * ``IBMQ Token``: Enter your IBMQ token, which can be retrieved [here](https://quantum.ibm.com/).
     * ``Noise Model``: Provide the name of a QPU to use the corresponding noise model for the simulator. In the example, we use ``ibm_brisbane``.
 
-    ![Camunda Start Process](./resources/images/engine_start_process.png)
+    [![Camunda Start Process](./resources/images/engine_start_process.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/engine_start_process.png)
 
 17. Switch back to the Camunda Cockpit, and select the deployed workflow.
 Then, a running process instance should be shown on the bottom.
 Click on the ID of the instance to visualize the current variables, as well as the position of the token.
 Check the variables to trace the current iteration, as well as costs of the optimization process.
 
-    ![Camunda Select Instance](./resources/images/engine_instance_selection.png)
+    [![Camunda Select Instance](./resources/images/engine_instance_selection.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/engine_instance_selection.png)
 
 18. To activate the quantum view, visualizing the QuantME modeling constructs, as well as quantum specific provenance data, such as calibration data of the QPU, click on ``toggle quantum view`` on the right.
 Hover over the different QuantME modeling constructs to visualize additional, task-specific data:
 
-    ![Camunda Quantum View](./resources/images/engine_quantum_view.png)
+    [![Camunda Quantum View](./resources/images/engine_quantum_view.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/engine_quantum_view.png)
 
 19. Wait until the token reaches the final user task, then, switch to the Tasklist.
 Select the task item on the left, then click on ``Claim`` to activate the item, and download the result plot using the given URL.
@@ -226,7 +226,7 @@ For the generation of quantum workflows, we distinguish three categories of patt
 (iii) Augmentation patterns, supporting the enhancement of the quantum workflow by incorporating additional features or elements, such as warm-starting or circuit cutting.
 Click on the ``Select Patterns`` button to start the pattern selection for the use case.
 
-    ![Modeler Pattern Selection Intro](./resources/images/pattern_selection_initial.png)
+    [![Modeler Pattern Selection Intro](./resources/images/pattern_selection_initial.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/pattern_selection_initial.png)
 
 2. Click on the ``+`` sign on the right to add a new algorithm pattern.
 To generate the workflow modeled in the first part of the tutorial, we select ``Quantum Approximate Optimization Algorithm (QAOA)`` as the algorithm pattern.
