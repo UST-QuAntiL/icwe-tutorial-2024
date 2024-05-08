@@ -224,7 +224,7 @@ For the generation of quantum workflows, we distinguish three categories of patt
 (i) Algorithm patterns, enabling to choose the quantum algorithms that should be orchestrated by the quantum workflow.
 (ii) Behavioral patterns, determining the execution strategy for the chosen algorithms, e.g., by using a hybrid runtime or a session.
 (iii) Augmentation patterns, supporting the enhancement of the quantum workflow by incorporating additional features or elements, such as warm-starting or circuit cutting
-Click on the ``Select`` Pattern button to start the pattern selection for the use case.
+Click on the ``Select Patterns`` button to start the pattern selection for the use case.
 
     ![Modeler Pattern Selection](./resources/images/TODO.png)
 
