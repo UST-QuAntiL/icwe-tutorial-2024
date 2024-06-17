@@ -199,15 +199,16 @@ Next, click on ``Start process`` on the top-right, select the name of the upload
 Then, a running process instance should be shown on the bottom.
 Click on the ID of the instance to visualize the current variables, as well as the position of the token.
 Check the variables to trace the current iteration, as well as costs of the optimization process.
+Reload the Camunda Cockpit periodically to observe the current progress.
 
     [![Camunda Select Instance](./resources/images/engine_instance_selection.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/engine_instance_selection.png)
 
-18. To activate the quantum view, visualizing the QuantME modeling constructs, as well as quantum specific provenance data, such as calibration data of the QPU, click on ``toggle quantum view`` on the right.
+18. To activate the quantum view, visualizing the QuantME modeling constructs, as well as quantum-specific provenance data, such as calibration data of the QPU, click on ``toggle quantum view`` on the right.
 Hover over the different QuantME modeling constructs to visualize additional, task-specific data:
 
     [![Camunda Quantum View](./resources/images/engine_quantum_view.png)](https://github.com/UST-QuAntiL/icwe-tutorial-2024/tree/master/resources/images/engine_quantum_view.png)
 
-19. Wait until the token reaches the final user task, then, switch to the Tasklist.
+19. Wait until the token reaches the final user task (reload the Camunda Cockpit periodically), then, switch to the Tasklist.
 Select the task item on the left, then click on ``Claim`` to activate the item, and download the result plot using the given URL.
 Afterwards, click on ``Complete`` to terminate the workflow instance.
 Finally, open the downloaded image, visualizing the MaxCut solution for the input graph.
